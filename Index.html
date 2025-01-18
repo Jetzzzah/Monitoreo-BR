@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadatos básicos de la página -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para hacer la página responsive -->
+  <title>Monitoreo del Brazo Robótico</title> <!-- Título que aparecerá en la pestaña del navegador -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Título principal de la página -->
+   <center><h1>Monitoreo del Brazo Robótico</h1></center>
+    
+  <!-- Sección para mostrar el estado del brazo -->
+  <div class="status">
+    <p><strong>Estado:</strong> <span id="status">Desconectado</span></p> <!-- Estado actual (Conectado/Desconectado) -->
+    <p><strong>Posición:</strong> <span id="position">(0, 0, 0)</span></p> <!-- Coordenadas simuladas del brazo -->
+  </div>
+  
+  <!-- Sección para mostrar los logs -->
+  <div class="logs">
+    <h3>Logs del sistema:</h3>
+    <ul id="logs">
+      <li>Esperando datos...</li> <!-- Mensaje inicial en los logs -->
+    </ul>
+  </div>
+  <script src="posicion.js"> </script>
+</body>
+</html>
