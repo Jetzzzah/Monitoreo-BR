@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Metadatos básicos de la página -->
-  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para hacer la página responsive -->
-  <title>Monitoreo del Brazo Robótico</title> <!-- Título que aparecerá en la pestaña del navegador -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoreo en Vivo</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .data-container {
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 300px;
+    }
+    .data-item {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
-  <!-- Título principal de la página -->
-   <center><h1>Monitoreo del Brazo Robótico</h1></center>
-    
-  <!-- Sección para mostrar el estado del brazo -->
-  <div class="status">
-    <p><strong>Estado:</strong> <span id="status">Desconectado</span></p> <!-- Estado actual (Conectado/Desconectado) -->
-    <p><strong>Posición:</strong> <span id="position">(0, 0, 0)</span></p> <!-- Coordenadas simuladas del brazo -->
+  <h1>Monitoreo en Vivo</h1>
+  <div class="data-container">
+    <div class="data-item">Posición X: <span id="posX">-</span></div>
+    <div class="data-item">Posición Y: <span id="posY">-</span></div>
+    <div class="data-item">Ángulo Z: <span id="angleZ">-</span></div>
   </div>
-  
-  <!-- Sección para mostrar los logs -->
-  <div class="logs">
-    <h3>Logs del sistema:</h3>
-    <ul id="logs">
-      <li>Esperando datos...</li> <!-- Mensaje inicial en los logs -->
-    </ul>
-  </div>
-  <script src="posicion.js"> </script>
+   <script src="posicion.js"> </script>
 </body>
 </html>
